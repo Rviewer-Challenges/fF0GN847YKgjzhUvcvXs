@@ -3,21 +3,18 @@ package com.example.toomatch
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
+import androidx.compose.ui.*
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.toomatch.ui.theme.ToomatchTheme
+import androidx.compose.ui.unit.dp
 import androidx.compose.material.Text as MyText
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent(){
+        setContent{
             MyTexts()
         }
 
@@ -28,19 +25,27 @@ class MainActivity : ComponentActivity() {
 fun MyTexts(){
     Column {
         Title("TOOMATCH")
-        SimpleButton()
-        SimpleButton()
-        SimpleButton()
+    }
+    Column (
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+            ){
+
+        Spacer(modifier = Modifier.height(50.dp))
+        SimpleButton("Start")
+        SimpleButton("Options")
+        SimpleButton("Credits")
     }
 
 }
 
 @Composable
-fun SimpleButton() {
+fun SimpleButton(myText: String) {
     Button(onClick = {
         //your onclick code here
     }) {
-        MyText(text = "Simple Button")
+        MyText(text = myText)
     }
 }
 
@@ -50,7 +55,7 @@ fun Title(text: String){
     MyText(text)
 }
 
-@Preview
+@Preview (showSystemUi = true)
 @Composable
 fun PreviewTexts(){
     MyTexts()
