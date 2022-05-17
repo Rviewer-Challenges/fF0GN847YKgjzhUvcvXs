@@ -13,14 +13,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 
 @Composable
-fun CreditsScreen(navController: NavController){
+fun GameScreen(navController: NavController){
     Scaffold() {
-        CreditsBodyContent(navController)
+        GameScreenBodyContent(navController)
     }
 }
 
 @Composable
-fun CreditsBodyContent(navController: NavController){
+fun GameScreenBodyContent(navController: NavController){
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,

@@ -13,14 +13,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 
 @Composable
-fun CreditsScreen(navController: NavController){
+fun OptionsScreen(navController: NavController){
     Scaffold() {
-        CreditsBodyContent(navController)
+       OptionsBodyContent(navController)
     }
 }
 
 @Composable
-fun CreditsBodyContent(navController: NavController){
+fun OptionsBodyContent(navController: NavController){
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,

@@ -9,16 +9,18 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import com.example.toomatch.navigation.AppScreens
 
 @Composable
-fun MainScreen(){
+fun MainScreen(navController: NavController){
     Scaffold() {
-        MyTexts()
+        BodyContent(navController)
     }
 }
 
 @Composable
-fun MyTexts(){
+fun BodyContent(navController: NavController){
     Column {
         Title("TOOMATCH")
     }
@@ -29,17 +31,17 @@ fun MyTexts(){
     ){
 
         Spacer(modifier = Modifier.height(50.dp))
-        SimpleButton("Start")
-        SimpleButton("Options")
-        SimpleButton("Credits")
+        SimpleButton("Start", AppScreens.CreditsScreen.route, navController)
+        SimpleButton("Options",AppScreens.CreditsScreen.route, navController)
+        SimpleButton("Credits",AppScreens.CreditsScreen.route, navController)
     }
 
 }
 
 @Composable
-fun SimpleButton(myText: String) {
+fun SimpleButton(myText: String, route: String, navController: NavController) {
     Button(onClick = {
-        //your onclick code here
+        navController.navigate(route)
     }) {
         Text(text = myText)
     }
@@ -51,8 +53,8 @@ fun Title(text: String){
     Text(text)
 }
 
-@Preview (showSystemUi = true)
+/*@Preview (showSystemUi = true)
 @Composable
 fun PreviewTexts(){
     MyTexts()
-}
+}*/
