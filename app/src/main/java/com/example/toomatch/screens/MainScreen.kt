@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.example.toomatch.navigation.AppScreens
 
 @Composable
@@ -53,8 +54,8 @@ fun Title(text: String){
     Text(text)
 }
 
-/*@Preview (showSystemUi = true)
+@Preview (showSystemUi = true)
 @Composable
-fun PreviewTexts(){
-    MyTexts()
-}*/
+fun PreviewMainScreen() {
+    BodyContent(rememberNavController())
+}
