@@ -5,6 +5,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.toomatch.screens.CreditsScreen
+import com.example.toomatch.screens.GameScreen
 import com.example.toomatch.screens.MainScreen
 
 @Composable
@@ -16,6 +17,9 @@ fun AppNavigation(){
         }
         composable(route = AppScreens.CreditsScreen.route){
             CreditsScreen(navController)
+        }
+        composable(route = AppScreens.GameScreen.route){
+            GameScreen(navController)
         }
     }
 }

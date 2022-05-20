@@ -32,7 +32,7 @@ fun BodyContent(navController: NavController){
     ){
 
         Spacer(modifier = Modifier.height(50.dp))
-        SimpleButton("Start", AppScreens.CreditsScreen.route, navController)
+        SimpleButton("Start", AppScreens.GameScreen.route, navController)
         SimpleButton("Options",AppScreens.CreditsScreen.route, navController)
         SimpleButton("Credits",AppScreens.CreditsScreen.route, navController)
     }
