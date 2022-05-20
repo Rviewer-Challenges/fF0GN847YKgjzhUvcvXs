@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -58,16 +59,25 @@ fun ImageDistribution(){
 }
 @Composable
 fun SetImage(numPicture: Int){
-   // imagenes.add(painterResource(R.drawable.fila_2_columna_1))
+
      Image(
         modifier = Modifier
             .height(Dp(80f))
             .width(Dp(80f))
-            .clickable { textoBoton.value = "Mimimi" },
+            .clickable {  },
 
         painter = imagenes[0],
         contentDescription = null
     )
+   /* Image(
+        modifier = Modifier
+            .height(Dp(80f))
+            .width(Dp(80f))
+            .clickable {  },
+
+        painter = imagenes[0],
+        contentDescription = null
+    )*/
 }
 
 /*fun MakeClick(){
@@ -82,11 +92,11 @@ fun GameScreenBodyContent(navController: NavController){
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = textoBoton.value)
+       // Text(text = textoBoton.value)
         ImageDistribution()
-        Button(onClick = { /*TODO*/ }) {
+       /* Button(onClick = { /*TODO*/ }) {
             Text(text = "navega")
-        }
+        }*/
 
     }
 }
