@@ -25,7 +25,7 @@ fun CreditsBodyContent(navController: NavController){
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
+        horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Text(text = "hola navegacion")
       Button(onClick = { /*TODO*/ }) {
